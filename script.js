@@ -14,12 +14,7 @@ button.addEventListener("click", () => {
 function changeGridSize(size = 4) {
 	resetGridSize();
 	for (let i = 0; i < size ** 2; i++) {
-		const pixel = document.createElement("div");
-		const pixelsPerSide = String(100 / size) + "%";
-
-		pixel.classList.add("pixel");
-		pixel.style.height = pixelsPerSide;
-		pixel.style.width = pixelsPerSide;
+		pixel = createPixel(size);
 		container.append(pixel);
 	}
 }
@@ -28,4 +23,21 @@ function resetGridSize() {
 	while (container.firstChild) {
 		container.removeChild(container.firstChild);
 	}
+}
+
+function createPixel(size) {
+	const pixel = document.createElement("div");
+	const pixelsPerSide = String(100 / size) + "%";
+
+	pixel.classList.add("pixel");
+	pixel.style.height = pixelsPerSide;
+	pixel.style.width = pixelsPerSide;
+	pixel.style.opacity = 1;
+
+	pixel.addEventListener("mouseover", (e) => {
+		let currentOpacity = e.target.style.opacity;
+		e.target.style.opacity = currentOpacity - 0.2;
+	});
+
+	return pixel;
 }

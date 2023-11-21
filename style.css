@@ -103,9 +103,9 @@ body {
 	background-color: grey;
 }
 
-.pixel:hover {
+/* .pixel:hover {
 	opacity: 80%;
-}
+} */
 
 button {
 	font-size: 0.8em;
