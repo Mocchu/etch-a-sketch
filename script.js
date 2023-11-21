@@ -1,10 +1,31 @@
 const container = document.querySelector(".container");
-const pixel = document.createElement("div");
+const button = document.querySelector("button");
 
-pixel.style.border = "1px solid black";
-pixel.style.height = "10px";
-pixel.style.width = "10px";
+changeGridSize();
 
-for (let i = 0; i < 16; i++) {
-	container.append(pixel);
+button.addEventListener("click", () => {
+	userInput = prompt("How many squares per side?");
+	if (userInput <= 0 || userInput > 100) {
+		alert("Grid size must be between 1-100 (inclusive)");
+	}
+	changeGridSize(userInput);
+});
+
+function changeGridSize(size = 4) {
+	resetGridSize();
+	for (let i = 0; i < size ** 2; i++) {
+		const pixel = document.createElement("div");
+		const pixelsPerSide = String(100 / size) + "%";
+
+		pixel.classList.add("pixel");
+		pixel.style.height = pixelsPerSide;
+		pixel.style.width = pixelsPerSide;
+		container.append(pixel);
+	}
+}
+
+function resetGridSize() {
+	while (container.firstChild) {
+		container.removeChild(container.firstChild);
+	}
 }
