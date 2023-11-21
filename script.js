@@ -36,7 +36,7 @@ function createPixel(size) {
 
 	pixel.addEventListener("mouseover", (e) => {
 		let currentOpacity = e.target.style.opacity;
-		e.target.style.opacity = currentOpacity - 0.2;
+		e.target.style.opacity = currentOpacity - 0.1;
 	});
 
 	return pixel;
