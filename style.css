@@ -62,6 +62,10 @@ h6 {
 	isolation: isolate;
 }
 
+a:visited {
+	color: inherit;
+}
+
 /* MY CSS */
 :root {
 	--bg-color: #121212;
@@ -103,6 +107,23 @@ body {
 	opacity: 80%;
 }
 
+button {
+	font-size: 0.8em;
+	background-color: teal;
+	border: none;
+	color: white;
+}
+
+button:hover {
+	filter: brightness(1.1);
+	cursor: pointer;
+}
+
 footer {
+	padding-top: 2rem;
 	flex-direction: column;
+}
+
+footer > * {
+	opacity: 0.7;
 }
