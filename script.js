@@ -7,8 +7,9 @@ button.addEventListener("click", () => {
 	userInput = prompt("How many squares per side?");
 	if (userInput <= 0 || userInput > 100) {
 		alert("Grid size must be between 1-100 (inclusive)");
+	} else {
+		changeGridSize(userInput);
 	}
-	changeGridSize(userInput);
 });
 
 function changeGridSize(size = 4) {
