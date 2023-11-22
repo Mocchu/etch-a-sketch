@@ -1,4 +1,4 @@
-# odin-etch-a-sketch
+# etch-a-sketch
 
 The Odin Project - Project 3
 
