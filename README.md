@@ -6,4 +6,4 @@ Etch a sketch game created using HTML, CSS &amp; JS
 
 [👉 Live Demo](https://mocchu.github.io/etch-a-sketch/)
 
-<img src="screenshot.png" width="300" />
+<img src="screenshot.png" width="400" />
